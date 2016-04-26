@@ -101,96 +101,135 @@ public class MainActivity extends AppCompatActivity {
 
     public void pls(View v){
         String t = "+";
-        opr.setText(String.valueOf(t));
         String i = " ";
         String a = "Nao e possivel dividir por zero";
         String b = "Nao existe raiz real de numero negativo";
+        String z = "r";
 
         if (out.getText().equals(a) || out.getText().equals(b)) {
             String r = "0";
             out.setText(String.valueOf(r));
+            opr.setText(String.valueOf(i));
         }
         if (Value.getText().equals(String.valueOf(i))){
             float q = Float.parseFloat(out.getText().toString());
             Value.setText(String.valueOf(q));
             int r = 0;
             out.setText(String.valueOf(r));
+            opr.setText(String.valueOf(t));
         }
         else {
-            float x = Float.parseFloat(Value.getText().toString());
-            float y = Float.parseFloat(out.getText().toString());
-            float q = x + y;
-            Value.setText(String.valueOf(q));
-            int r = 0;
-            out.setText(String.valueOf(r));
+            if(opr.getText().equals(String.valueOf(t))) {
+                float x = Float.parseFloat(Value.getText().toString());
+                float y = Float.parseFloat(out.getText().toString());
+                float q = x + y;
+                Value.setText(String.valueOf(q));
+                int r = 0;
+                out.setText(String.valueOf(r));
+                opr.setText(String.valueOf(t));
+            }
+            else{
+                eql(v);
+                opr.setText(String.valueOf(t));
+                float w = Float.parseFloat(out.getText().toString());
+                Value.setText(String.valueOf(w));
+                int j = 0;
+                out.setText(String.valueOf(j));
+            }
         }
     }
 
     public void min(View v){
         String t = "-";
-        opr.setText(String.valueOf(t));
         String i = " ";
         String a = "Nao e possivel dividir por zero";
         String b = "Nao existe raiz real de numero negativo";
         if (out.getText().equals(a) || out.getText().equals(b)) {
             String r = "0";
             out.setText(String.valueOf(r));
+            opr.setText(String.valueOf(i));
         }
         if (Value.getText().equals(String.valueOf(i))){
             float q = Float.parseFloat(out.getText().toString());
             Value.setText(String.valueOf(q));
             int r = 0;
             out.setText(String.valueOf(r));
+            opr.setText(String.valueOf(t));
         }
         else {
-            float x = Float.parseFloat(Value.getText().toString());
-            float y = Float.parseFloat(out.getText().toString());
-            float q = x - y;
-            Value.setText(String.valueOf(q));
-            int r = 0;
-            out.setText(String.valueOf(r));
+            if(opr.getText().equals(String.valueOf(t))) {
+                float x = Float.parseFloat(Value.getText().toString());
+                float y = Float.parseFloat(out.getText().toString());
+                float q = x - y;
+                Value.setText(String.valueOf(q));
+                int r = 0;
+                out.setText(String.valueOf(r));
+                opr.setText(String.valueOf(t));
+            }
+            else{
+                eql(v);
+                opr.setText(String.valueOf(t));
+                float w = Float.parseFloat(out.getText().toString());
+                Value.setText(String.valueOf(w));
+                int j = 0;
+                out.setText(String.valueOf(j));
+            }
         }
+
     }
     public void tim(View v){
         String t = "*";
-        opr.setText(String.valueOf(t));
         String i = " ";
         String a = "Nao e possivel dividir por zero";
         String b = "Nao existe raiz real de numero negativo";
         if (out.getText().equals(a) || out.getText().equals(b)) {
             String r = "0";
             out.setText(String.valueOf(r));
+            opr.setText(String.valueOf(i));
         }
         if (Value.getText().equals(String.valueOf(i))){
             float q = Float.parseFloat(out.getText().toString());
             Value.setText(String.valueOf(q));
             int r = 0;
             out.setText(String.valueOf(r));
+            opr.setText(String.valueOf(t));
         }
         else{
-            float x = Float.parseFloat(Value.getText().toString());
-            float y = Float.parseFloat(out.getText().toString());
-            float q = x * y;
-            Value.setText(String.valueOf(q));
-            int r = 0;
-            out.setText(String.valueOf(r));
+            if(opr.getText().equals(String.valueOf(t))) {
+                float x = Float.parseFloat(Value.getText().toString());
+                float y = Float.parseFloat(out.getText().toString());
+                float q = x * y;
+                Value.setText(String.valueOf(q));
+                int r = 0;
+                out.setText(String.valueOf(r));
+                opr.setText(String.valueOf(t));
+            }
+            else{
+                eql(v);
+                opr.setText(String.valueOf(t));
+                float w = Float.parseFloat(out.getText().toString());
+                Value.setText(String.valueOf(w));
+                int j = 0;
+                out.setText(String.valueOf(j));
+            }
         }
     }
     public void ovr(View v){
         String t = "/";
-        opr.setText(String.valueOf(t));
         String i = " ";
         String a = "Nao e possivel dividir por zero";
         String b = "Nao existe raiz real de numero negativo";
         if (out.getText().equals(a) || out.getText().equals(b)) {
             String r = "0";
             out.setText(String.valueOf(r));
+            opr.setText(String.valueOf(i));
         }
         if (Value.getText().equals(String.valueOf(i))){
             float q = Float.parseFloat(out.getText().toString());
             Value.setText(String.valueOf(q));
             int r = 0;
             out.setText(String.valueOf(r));
+            opr.setText(String.valueOf(t));
         }
         else {
             if (Float.parseFloat(out.getText().toString()) == 0) {
@@ -198,10 +237,23 @@ public class MainActivity extends AppCompatActivity {
                 opr.setText(String.valueOf(q));
             }
             else {
-                float x = Float.parseFloat(Value.getText().toString());
-                float y = Float.parseFloat(out.getText().toString());
-                float q = x / y;
-                Value.setText(String.valueOf(q));
+                if(opr.getText().equals(String.valueOf(t))) {
+                    float x = Float.parseFloat(Value.getText().toString());
+                    float y = Float.parseFloat(out.getText().toString());
+                    float q = x / y;
+                    Value.setText(String.valueOf(q));
+                    int r = 0;
+                    out.setText(String.valueOf(r));
+                    opr.setText(String.valueOf(t));
+                }
+                else{
+                    eql(v);
+                    opr.setText(String.valueOf(t));
+                    float w = Float.parseFloat(out.getText().toString());
+                    Value.setText(String.valueOf(w));
+                    int j = 0;
+                    out.setText(String.valueOf(j));
+                }
             }
             int r = 0;
             out.setText(String.valueOf(r));
@@ -311,7 +363,8 @@ public class MainActivity extends AppCompatActivity {
                     String r = Value.getText().toString();
                     out.setText(String.valueOf(r));
                 }
-            } else {
+            }
+            else {
                 String q = out.getText().toString();
                 out.setText(String.valueOf(q));
             }
